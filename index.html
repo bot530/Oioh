@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Área do Cliente</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <h2>Área do Cliente</h2>
+            <p>Conectando você ao futuro com segurança, inovação e confiança!</p>
+        </div>
+        <div class="right-panel">
+            <form id="contactForm">
+                <label for="name">Nome Completo:</label>
+                <input type="text" id="name" name="name" onblur="formatarNome()" />
+                <span id="nameError" style="display: none; color: red;">Nome inválido</span>
+
+                <label for="cpfCnpj">CPF ou CNPJ:</label>
+                <input type="text" id="cpfCnpj" name="cpfCnpj" oninput="validarTamanhoCPF_CNPJ()" onblur="formatarCPF_CNPJ()" />
+                <span id="cpfCnpjError" style="display: none; color: red;"></span>
+
+                <label for="reason">Razão</label>
+                <select id="reason" name="reason">
+                    <option value="">2ª Via de Boletos</option>
+                </select>
+
+                <button type="submit">Entrar em Contato</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
